@@ -3,3 +3,4 @@ node_modules
 server-env
 lib
 *.zip
+.DS_Store
