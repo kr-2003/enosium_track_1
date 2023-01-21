@@ -1,12 +1,3 @@
 fastapi
 uvicorn
-pymongo
-passlib
-bcrypt
-python-jose
-jose
-python-multipart
-pandas
-numpy 
-matplotlib
 scikit-learn

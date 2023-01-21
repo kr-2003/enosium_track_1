@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import { createContext, useEffect, useState } from "react";
 export const authApi = createContext(null);
+import Script from "next/script";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   const [auth, setAuth] = useState(false);
@@ -81,6 +83,11 @@ export default function App({ Component, pageProps }) {
         setPurpose,
       }}
     >
+      <Script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></Script>
       <Component {...pageProps} />
     </authApi.Provider>
   );
