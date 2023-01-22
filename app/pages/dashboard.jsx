@@ -13,6 +13,7 @@ import axios from "axios";
 import Footer from '../components/Footer';
 import Section from '../components/Section';
 
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -22,7 +23,7 @@ const style = {
   bgcolor: "background.paper",
   borderRadius: 5,
   boxShadow: 24,
-  width: "80%",
+  width: "400px",
   pt: 1,
   pb: 4,
   px: 4,
@@ -43,6 +44,8 @@ function Dashboard() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const {
+    page,
+    setPage,
     noOfMaintainers,
     history,
     loanAmount,
@@ -85,6 +88,7 @@ function Dashboard() {
       housing: housing,
       yearsOfStay: Number(yearsOfStay),
     };
+    console.log(body);
     await axios
       .post("https://3jemp5.deta.dev/getPrediction", body)
       .then((response) => {
@@ -156,18 +160,20 @@ green I wear suits and I’m awesome. I’m your bro—I’m Broda!</h3>
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className="md:w-[450px] w-[90%] grid grid-cols-3 gap-4">
-          <FormI></FormI>
-          <FormII></FormII>
-          <FormIII></FormIII>
-          <div className="col-span-6 sm:flex sm:items-center sm:gap-4 w-100 flex justify-center items-center">
+        <Box sx={style} className="md:w-[450px] w-[90%] grid grid-cols-1 gap-4">
+          {page == 0 && <FormI></FormI>}
+          {page == 1 && <FormII></FormII>}
+          {page == 2 && <FormIII></FormIII>}
+          {/* <FormII></FormII>
+          <FormIII></FormIII> */}
+          {/* <div className="col-span-6 sm:flex sm:items-center sm:gap-4 w-100 flex justify-center items-center">
             <button
               onClick={submitFormHandler}
               className="inline-block shrink-0 rounded-md border border-[#0d9488] bg-[#0d9488] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0d9488] focus:outline-none focus:ring active:text-blue-500"
             >
               Submit
             </button>
-          </div>
+          </div> */}
         </Box>
       </Modal>
     </>
