@@ -1,7 +1,7 @@
 # Scope for repaying the loan
 
 ### Hosted Website
-- [Click here to visit website]("https://enosium-track-1-rays.vercel.app/")
+- [Click here to visit website](https://enosium-track-1-rays.vercel.app/)
 
 ## Setup Instructions
 
