@@ -227,7 +227,7 @@ function FormIII() {
           />
         </div>
 
-        <div className="col-span-6">
+        <div className="col-span-6 ">
           <label className="block text-sm font-medium text-gray-700">
             Collateral
           </label>
@@ -245,7 +245,7 @@ function FormIII() {
             </option>
           </select>
         </div>
-        <div className="col-span-6 sm:col-span-6">
+        <div className="col-span-6 sm:col-span-3">
           <label className="block text-sm font-medium text-gray-700">Job</label>
           <select
             onChange={(e) => setJob(e.target.value)}
@@ -263,6 +263,22 @@ function FormIII() {
               unemployed/ unskilled - non-resident
             </option>
           </select>
+        </div>
+        <div className="col-span-6 sm:col-span-3">
+          <label className="block text-sm font-medium text-gray-700">
+            Years of Employement
+          </label>
+
+          <input
+            
+            type="number"
+            id="points"
+            name="loan amount taken"
+            min="200"
+            max="16000"
+            className="p-2 h-10 mt-1 w-full rounded-md border-[1px] border-[#0d9488] bg-white text-sm text-gray-700 shadow-sm"
+            
+          />
         </div>
         <div className="col-span-6 sm:col-span-3">
           <label className="block text-sm font-medium text-gray-700">

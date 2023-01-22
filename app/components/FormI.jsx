@@ -157,7 +157,6 @@ function FormI() {
             <option value="Purchase of radio/television">
               Purchase of radio/television
             </option>
-            <option value="Old Car Repair">Old Car Repair</option>
             <option value="Purchase of furniture/equipment">
               Purchase of furniture/equipment
             </option>
