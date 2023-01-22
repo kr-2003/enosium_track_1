@@ -10,6 +10,8 @@ import FormI from "../components/FormI";
 import FormII from "../components/FormII";
 import FormIII from "../components/FormIII";
 import axios from "axios";
+import Footer from '../components/Footer';
+import Section from '../components/Section';
 
 const style = {
   position: "absolute",
@@ -25,6 +27,14 @@ const style = {
   pb: 4,
   px: 4,
 };
+const myStyle = {
+  backgroundImage:
+    "url('https://img.freepik.com/premium-vector/money-bag-with-dollar-sign-house-scales-real-estate-rental-expense-liabilities-concept-buying-home-mortgage-loan-real-estate-investment-sale-rent-apartment_458444-1108.jpg?w=2000')",
+  height: '500px'
+}
+const myStyle2 = {
+  backgroundColor: '#256D85'
+}
 function Dashboard() {
   const { auth } = useContext(authApi);
   const [user, setUser] = useState();
@@ -97,7 +107,7 @@ function Dashboard() {
   return (
     <>
       <Header></Header>
-      <div className="text-center">
+      {/* <div className="text-center">
         <Image width={100} height={100} src="/images/loan.jpg"></Image>
         <button
           onClick={() => {
@@ -106,7 +116,40 @@ function Dashboard() {
         >
           <Button></Button>
         </button>
+      </div> */}
+
+      <div>
+        <div style={myStyle} class="py-10 bg-cover flex justify-center items-center bg-no-repeat bg-fixed">
+          <div class="container m-auto text-center px-6 opacity-100">
+            <h1 class="text-5xl font-bold mb-2 text-black">Welcome to Goliath National Bank!!</h1>
+            <h3 class="text-3xl mb-8 text-slate-700">It’s gonna be legend-... wait for it… DAIRY!</h3>
+          </div>
+        </div>
       </div>
+
+      <section style={myStyle2}>
+        <div class="container align-middle mx-auto px-6 text-center py-16">
+          <h2 class="mb-4 text-4xl font-semibold  text-center text-white">Barney Stinson</h2>
+          <h3 class="my-4 mb-8 text-2xl font-light text-white">Think of me like Yoda, but instead of being little and
+green I wear suits and I’m awesome. I’m your bro—I’m Broda!</h3>
+          <button onClick={() => {
+              setOpen(true);
+            }}><Button></Button></button>
+        </div>
+      </section>
+
+      {/* <div>
+        <div class="py-10 bg-cover bg-no-repeat bg-fixed">
+          <div class="container m-auto text-center px-6 opacity-100">
+            <button onClick={() => {
+              setOpen(true);
+            }} ><Button></Button></button>
+          </div>
+        </div>
+      </div> */}
+      <Section />
+      <Footer />
+
       <Modal
         open={open}
         onClose={handleClose}
@@ -132,3 +175,7 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+
+
+// class="bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider hover:border-red hover:text-white hover:bg-red-600"

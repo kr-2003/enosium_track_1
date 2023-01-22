@@ -4,9 +4,9 @@ function Button() {
   return (
     <div>
       <a
-        className="inline-flex items-center rounded border border-[#0d9488] bg-[#0d9488] px-8 py-3 text-white hover:bg-transparent hover:text-[#0d9488] focus:outline-none focus:ring active:text-[#0d9488]"
+        className="bg-gradient-to-r from-cyan-400 to-teal-400 shadow-md inline-flex items-center rounded-full border border-[#0d9488]  px-8 py-3 text-white hover:scale-110 focus:outline-none focus:ring active:text-[#0d9488]"
       >
-        <span className="text-sm font-medium"> Check your loan eligibility </span>
+        <span className="text-md font-medium"> Check your loan eligibility </span>
 
         <svg
           className="ml-3 h-5 w-5"
