@@ -17,10 +17,10 @@ green I wear suits and I’m awesome. I’m your bro—I’m Broda!</h3>
         <div >
           <div class="container max-w-7xl mx-auto py-2 mb-10 px-4" >
             <div class="flex flex-wrap">
-              <TeamCard name="Rohit Dhanotia" division="Web Developement" />
-              <TeamCard name="Yatharth Gupta" division="AI/ML" />
-              <TeamCard name="Abhinav Kumar" division="Web Developement" />
-              <TeamCard name="Pilla Sekhar" division="AI/ML" />
+              <TeamCard image={`/images/rohit.jpeg`} name="Rohit Dhanotia" division="Web Developement" />
+              <TeamCard image={`/images/yatharth.jpeg`} name="Yatharth Gupta" division="AI/ML" />
+              <TeamCard image={`/images/abhinav.webp`} name="Abhinav Kumar" division="Web Developement" />
+              <TeamCard image={`/images/sekhar.jpeg`} name="Pilla Sekhar" division="AI/ML" />
             </div>
           </div>
         </div>

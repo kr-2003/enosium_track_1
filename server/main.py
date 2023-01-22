@@ -40,5 +40,10 @@ def get_prediction(request: dict):
     print(probab)
     pred = np.array(pred)
     print(pred[0])
+    prob = 1
+    if(pred[0]==1):
+        prob = probab[0][0]
+    else:
+        prob = probab[0][1]
     print(request)
-    return {'result': str(pred[0]), 'probab': probab}
+    return {'result': str(pred[0]), 'probab': prob}

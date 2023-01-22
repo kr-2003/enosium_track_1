@@ -10,9 +10,8 @@ import FormI from "../components/FormI";
 import FormII from "../components/FormII";
 import FormIII from "../components/FormIII";
 import axios from "axios";
-import Footer from '../components/Footer';
-import Section from '../components/Section';
-
+import Footer from "../components/Footer";
+import Section from "../components/Section";
 
 const style = {
   position: "absolute",
@@ -29,15 +28,13 @@ const style = {
   px: 4,
 };
 const myStyle = {
-  backgroundImage:
-    "url('/images/dashboard-img.webp')",
-  height: '500px'
-}
+  backgroundImage: "url('/images/dashboard-img.webp')",
+  height: "500px",
+};
 const myStyle2 = {
-  backgroundColor: '#256D85'
-}
+  backgroundColor: "#256D85",
+};
 function Dashboard() {
-  const { auth } = useContext(authApi);
   const [user, setUser] = useState();
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
@@ -66,7 +63,7 @@ function Dashboard() {
     yearsOfStay,
     purpose,
   } = useContext(authApi);
- 
+
   useEffect(() => {
     if (localStorage.getItem("user")) {
       setUser(JSON.parse(localStorage.getItem("user")));
@@ -87,25 +84,46 @@ function Dashboard() {
       </div> */}
 
       <div>
-        <div style={myStyle} class="py-10 bg-cover flex justify-center items-center bg-no-repeat bg-fixed">
+        <div
+          style={myStyle}
+          class="py-10 bg-cover flex justify-center items-center bg-no-repeat bg-fixed"
+        >
           <div class="container m-auto text-center px-6 opacity-100">
-          <div class="p-4">
+            <div class="p-4">
               <div class="flex rounded-lg pb-6 pt-10 p-8 flex-col bg-white bg-opacity-40 backdrop-blur-sm drop-shadow-md">
-            <h1 class="text-5xl font-bold mb-2 text-black opacity-100">Welcome to The Legendary Predictor!!</h1>
-            <h3 class="text-3xl mb-8 text-slate-700 opacity-100">It’s gonna be legend-... wait for it… DAIRY!</h3>
-            </div>
+                <h1 class="text-5xl font-bold mb-2 text-black opacity-100">
+                  Welcome to The Legendary Predictor!!
+                </h1>
+                <h3 class="text-3xl mb-8 text-slate-700 opacity-100">
+                  It’s gonna be legend-... wait for it… DAIRY!
+                </h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <section className="bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-900 shadow-md" style={myStyle2}>
+      <section
+        className="bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-900 shadow-md"
+        style={myStyle2}
+      >
         <div class="container align-middle mx-auto px-6 text-center py-16">
-          <h2 class="mb-4 text-4xl font-semibold  text-center text-white">The Legendary Predictor</h2>
-          <h3 class="my-4 mb-8 text-2xl font-light text-white">In today's world of recession and uncertain economy following the pandemic, it is vital to have healthy and sustainable financing no matter who you are. A big part is ensuring this is to stay clear of risky loan traps and prevent taking on unsustainable debt. The Legendary Predictor helps you to make the decision with high accuracy.</h3>
-          <button onClick={() => {
+          <h2 class="mb-4 text-4xl font-semibold  text-center text-white">
+            The Legendary Predictor
+          </h2>
+          <h3 class="my-4 mb-8 text-2xl font-light text-white">
+            In today’s world of recession and uncertain economy following the
+            pandemic, it is vital to have healthy and sustainable financing no
+            matter who you are. A big part in ensuring this is to stay clear of
+            risky loan traps and prevent taking on unsustainable debts.
+          </h3>
+          <button
+            onClick={() => {
               setOpen(true);
-            }}><Button></Button></button>
+            }}
+          >
+            <Button></Button>
+          </button>
         </div>
       </section>
 
@@ -148,7 +166,5 @@ function Dashboard() {
 }
 
 export default Dashboard;
-
-
 
 // class="bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider hover:border-red hover:text-white hover:bg-red-600"

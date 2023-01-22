@@ -1,10 +1,10 @@
-function TeamCard({name, division}) {
+function TeamCard({name, division, image}) {
     return (
         <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div class="wrapper antialiased text-gray-900">
                   <div>
 
-                    <img src="https://source.unsplash.com/random/350x350" alt=" random imgee" class="w-full object-cover object-center rounded-lg shadow-md"></img>
+                    <img src={image} alt=" random imgee" class="w-full object-cover object-center rounded-lg shadow-md"></img>
 
                     <div class="relative px-4 -mt-16  ">
                       <div class="bg-white p-4 rounded-lg shadow-lg">

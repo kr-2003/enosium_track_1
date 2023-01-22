@@ -21,6 +21,7 @@ const style = {
 function FormIII() {
   const [open, setOpen] = React.useState();
   const [result, setResult] = useState();
+  const [prob, setProb] = useState();
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [gif, setGif] = useState();
@@ -93,11 +94,12 @@ function FormIII() {
       setLoading(true);
       setOpen("result");
       await axios
-        .post("http://localhost:8000/getPrediction", body)
+        .post("https://3jemp5.deta.dev/getPrediction", body)
         .then((response) => {
           console.log(response);
           console.log(response.data);
           setResult(response.data.result);
+          setProb(response.data.probab);
           setLoading(false);
           if (response.data.result == "1") {
             setGif("/images/down.gif");
@@ -181,7 +183,9 @@ function FormIII() {
               </div>
 
               {result === "1" && <h1>You are a loan defaulter!</h1>}
+              {result === "1" && <h1>Your score is : {Math.floor((1 - prob) * 100)}</h1>}
               {result === "2" && <h2>You are not a loan defaulter!</h2>}
+              {result === "2" && <h1>Your score is : {Math.floor((prob) * 100)}</h1>}
               {/* <div>Please fill all the fields!!</div> */}
               <button onClick={() => Router.reload()}>OK</button>
             </>
@@ -270,14 +274,12 @@ function FormIII() {
           </label>
 
           <input
-            
             type="number"
             id="points"
             name="loan amount taken"
             min="200"
             max="16000"
             className="p-2 h-10 mt-1 w-full rounded-md border-[1px] border-[#0d9488] bg-white text-sm text-gray-700 shadow-sm"
-            
           />
         </div>
         <div className="col-span-6 sm:col-span-3">
