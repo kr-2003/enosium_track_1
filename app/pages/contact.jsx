@@ -25,17 +25,17 @@ function contact() {
         </div>
         <div class="">
           <div>
-            <span class="uppercase text-sm text-gray-100 font-bold">Full Name</span>
+            <span class="uppercase text-sm text-teal-400 font-bold">Full Name</span>
             <input class="w-full bg-gray-200 text-gray-900 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text" placeholder=""></input>
           </div>
           <div class="mt-8">
-            <span class="uppercase text-sm text-gray-100 font-bold">Email</span>
+            <span class="uppercase text-sm text-teal-400 font-bold">Email</span>
             <input class="w-full bg-gray-200 text-gray-900 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text"></input>
           </div>
           <div class="mt-8">
-            <span class="uppercase text-sm text-gray-100 font-bold">Message</span>
+            <span class="uppercase text-sm text-teal-400 font-bold">Message</span>
             <textarea
               class="w-full h-32 bg-gray-200 text-gray-900 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
           </div>

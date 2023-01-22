@@ -8,14 +8,15 @@ import Router from "next/router";
 import Image from "next/image";
 const style = {
   position: "absolute",
-  top: "15%",
+  top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   height: "auto",
-  borderRadius: 1,
+  borderRadius: 5,
   boxShadow: 24,
   py: 1,
-  px: 4,
+  px: 2,
+  pb: 2,
 };
 
 function FormIII() {
@@ -155,7 +156,7 @@ function FormIII() {
       >
         <Box
           sx={style}
-          className="bg-[#fff] md:w-[450px] w-[90%] grid grid-cols-1 gap-4"
+          className="bg-[#fff] md:w-[450px] w-[90%] grid grid-cols-1 gap-4 bg-gradient-to-r from-cyan-400 to-teal-400 shadow-md items-center"
         >
           {loading && (
             <>
@@ -168,7 +169,7 @@ function FormIII() {
                 ></Image>
               </div>
 
-              <h1>Loading....</h1>
+              <h1 className="text-center text-lg font-semibold text-white">Wait for it....</h1>
             </>
           )}
           {!loading && (
@@ -177,17 +178,17 @@ function FormIII() {
                 <Image
                   alt="Result Icon"
                   src={gif}
-                  width={100}
-                  height={100}
+                  width={150}
+                  height={150}
                 ></Image>
               </div>
 
-              {result === "1" && <h1>You are a loan defaulter!</h1>}
-              {result === "1" && <h1>Your score is : {Math.floor((1 - prob) * 100)}</h1>}
-              {result === "2" && <h2>You are not a loan defaulter!</h2>}
-              {result === "2" && <h1>Your score is : {Math.floor((prob) * 100)}</h1>}
+              {result === "1" && <h1 className="text-center text-2xl font-semibold">You are a loan defaulter!</h1>}
+              {result === "1" && <h1 className="text-center text-lg text-white">Your score is : {Math.floor((1 - prob) * 100)}</h1>}
+              {result === "2" && <h2 className="text-center text-2xl font-semibold">You are not a loan defaulter!</h2>}
+              {result === "2" && <h1 className="text-center text-lg text-white">Your score is : {Math.floor((prob) * 100)}</h1>}
               {/* <div>Please fill all the fields!!</div> */}
-              <button onClick={() => Router.reload()}>OK</button>
+              <button className="text-lg font-semibold uppercase leading-tight truncate bg-cyan-700 hover:bg-cyan-900 text-white inline-block py-1 rounded-full tracking-wide" onClick={() => Router.reload()}>OK</button>
             </>
           )}
         </Box>

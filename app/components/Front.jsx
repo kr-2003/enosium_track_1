@@ -9,7 +9,7 @@ function Front() {
         <div class="py-10 bg-cover flex justify-center items-center bg-no-repeat bg-fixed">
           <div class="container m-auto text-center px-6 opacity-100">
           <div class="p-4">
-              <div class="flex rounded-lg pb-6 pt-10 p-8 flex-col bg-white bg-opacity-40 backdrop-blur-sm drop-shadow-md">
+              <div class="flex rounded-lg pb-6 pt-10 p-8 flex-col bg-white bg-opacity-60 backdrop-blur-md drop-shadow-md">
             <h1 class="text-4xl font-bold mb-4 text-black opacity-100">Welcome to The Legendary Predictor!!</h1>
             <h3 class="text-xl mb-8 text-slate-700 opacity-100">To check your loan eligibility, go to DASHBOARD.</h3>
             </div>

@@ -11,8 +11,7 @@ function about() {
       <div>
       <div class="container align-middle mx-auto mt-4 px-6 text-center py-8">
           <h2 class="mb-4 text-4xl font-semibold  text-center text-black">Meet the <span class="text-teal-400">Team</span></h2>
-          <h3 class="my-4 text-2xl font-light text-black">Think of me like Yoda, but instead of being little and
-green I wear suits and I’m awesome. I’m your bro—I’m Broda!</h3>
+          <h3 class="my-4 text-2xl font-light text-black">These are the people who worked hard on the project to provide you with most accurate Loan Eligibility Prediction.</h3>
         </div>
         <div >
           <div class="container max-w-7xl mx-auto py-2 mb-10 px-4" >

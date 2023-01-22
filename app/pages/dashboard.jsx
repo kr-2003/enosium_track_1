@@ -95,7 +95,7 @@ function Dashboard() {
                   Welcome to The Legendary Predictor!!
                 </h1>
                 <h3 class="text-3xl mb-8 text-slate-700 opacity-100">
-                  It’s gonna be legend-... wait for it… DAIRY!
+                  It’s gonna be legend-... wait for it… DARY!
                 </h3>
               </div>
             </div>

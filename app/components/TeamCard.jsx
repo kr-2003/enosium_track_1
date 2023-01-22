@@ -4,7 +4,7 @@ function TeamCard({name, division, image}) {
                 <div class="wrapper antialiased text-gray-900">
                   <div>
 
-                    <img src={image} alt=" random imgee" class="w-full object-cover object-center rounded-lg shadow-md"></img>
+                    <img src={image} alt="random image" class="w-full object-cover object-center rounded-lg shadow-md"></img>
 
                     <div class="relative px-4 -mt-16  ">
                       <div class="bg-white p-4 rounded-lg shadow-lg">
