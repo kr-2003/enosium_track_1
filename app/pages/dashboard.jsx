@@ -89,8 +89,12 @@ function Dashboard() {
       <div>
         <div style={myStyle} class="py-10 bg-cover flex justify-center items-center bg-no-repeat bg-fixed">
           <div class="container m-auto text-center px-6 opacity-100">
-            <h1 class="text-5xl font-bold mb-2 text-black">Welcome to Goliath National Bank!!</h1>
-            <h3 class="text-3xl mb-8 text-slate-700">It’s gonna be legend-... wait for it… DAIRY!</h3>
+          <div class="p-4">
+              <div class="flex rounded-lg pb-6 pt-10 p-8 flex-col bg-white bg-opacity-40 backdrop-blur-sm drop-shadow-md">
+            <h1 class="text-5xl font-bold mb-2 text-black opacity-100">Welcome to Goliath National Bank!!</h1>
+            <h3 class="text-3xl mb-8 text-slate-700 opacity-100">It’s gonna be legend-... wait for it… DAIRY!</h3>
+            </div>
+            </div>
           </div>
         </div>
       </div>
