@@ -91,7 +91,7 @@ function Dashboard() {
           <div class="container m-auto text-center px-6 opacity-100">
           <div class="p-4">
               <div class="flex rounded-lg pb-6 pt-10 p-8 flex-col bg-white bg-opacity-40 backdrop-blur-sm drop-shadow-md">
-            <h1 class="text-5xl font-bold mb-2 text-black opacity-100">Welcome to Goliath National Bank!!</h1>
+            <h1 class="text-5xl font-bold mb-2 text-black opacity-100">Welcome to The Legendary Predictor!!</h1>
             <h3 class="text-3xl mb-8 text-slate-700 opacity-100">It’s gonna be legend-... wait for it… DAIRY!</h3>
             </div>
             </div>
@@ -99,11 +99,10 @@ function Dashboard() {
         </div>
       </div>
 
-      <section style={myStyle2}>
+      <section className="bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-900 shadow-md" style={myStyle2}>
         <div class="container align-middle mx-auto px-6 text-center py-16">
-          <h2 class="mb-4 text-4xl font-semibold  text-center text-white">Barney Stinson</h2>
-          <h3 class="my-4 mb-8 text-2xl font-light text-white">Think of me like Yoda, but instead of being little and
-green I wear suits and I’m awesome. I’m your bro—I’m Broda!</h3>
+          <h2 class="mb-4 text-4xl font-semibold  text-center text-white">The Legendary Predictor</h2>
+          <h3 class="my-4 mb-8 text-2xl font-light text-white">In today's world of recession and uncertain economy following the pandemic, it is vital to have healthy and sustainable financing no matter who you are. A big part is ensuring this is to stay clear of risky loan traps and prevent taking on unsustainable debt. The Legendary Predictor helps you to make the decision with high accuracy.</h3>
           <button onClick={() => {
               setOpen(true);
             }}><Button></Button></button>

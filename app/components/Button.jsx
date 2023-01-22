@@ -4,7 +4,7 @@ function Button() {
   return (
     <div>
       <a
-        className="bg-gradient-to-r from-cyan-400 to-teal-400 shadow-md inline-flex items-center rounded-full border border-[#0d9488]  px-8 py-3 text-white hover:scale-110 focus:outline-none focus:ring active:text-[#0d9488]"
+        className="bg-gradient-to-r from-cyan-400 to-teal-400 shadow-md inline-flex items-center rounded-full border border-[#0d9488]  px-8 py-3 text-white hover:scale-110 focus:outline-none focus:ring"
       >
         <span className="text-md font-medium"> Check your loan eligibility </span>
 

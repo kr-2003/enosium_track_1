@@ -20,7 +20,7 @@ function contact() {
             </div>
           </div>
           <div class="mt-8 text-center">
-            <img></img>
+          <Image alt='Main front image!' src="/images/contact.webp" height={400} width={400}></Image>
           </div>
         </div>
         <div class="">

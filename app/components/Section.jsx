@@ -4,8 +4,8 @@ function Section() {
       <section class="text-gray-700 body-font border-t border-gray-200">
         <div class="container px-5 py-12 mx-auto">
           <div class="flex flex-col text-center w-full mb-8">
-            <h2 class="text-xs text-teal-500 tracking-widest font-medium title-font mb-1">Goliath National Bank (GNB)</h2>
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-800">Bro Reviews</h1>
+            <h2 class="text-xs text-teal-500 tracking-widest font-medium title-font mb-1">The Legendary Predictor</h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-800">Testimonials</h1>
           </div>
           <div class="flex flex-wrap">
 
@@ -42,7 +42,7 @@ function Section() {
                   <h2 class="text-gray-900 text-lg title-font font-medium">Marshal Erikson</h2>
                 </div>
                 <div class="flex-grow">
-                  <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                  <p class="leading-relaxed text-base"> </p>
                   <a class="mt-3 hover:text-teal-600 hover:cursor-pointer text-teal-400 inline-flex items-center">Learn More
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                       <path d="M5 12h14M12 5l7 7-7 7"></path>

@@ -21,36 +21,30 @@ function Footer() {
             />
           </svg>
         </Link>
-        <span class="ml-3 text-xl text-white">Squid Bank</span>
+        <span class="ml-3 text-xl text-white">The Legendary Predictor</span>
       </a>
-      <p class="mt-2 text-sm text-gray-400">Air plant banjo lyft occupy retro adaptogen indego</p>
+      <p class="mt-2 text-sm text-gray-400">It’s gonna be legend-... wait for it… DAIRY!</p>
     </div>
     <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
       <div class="lg:w-1/2 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium tracking-widest text-sm mb-3 text-white">CATEGORIES</h2>
-        <nav class="list-none mb-10">
+        <h2 class="text-center title-font font-medium tracking-widest text-sm mb-3 text-white">CATEGORIES</h2>
+        <nav class="text-center list-none mb-10">
           <li>
-            <a class="text-gray-400 hover:text-white hover:cursor-pointer">Home</a>
+            <a href="/" class="text-gray-400 text-center hover:text-white hover:cursor-pointer">Home</a>
           </li>
           <li>
-            <a class="text-gray-400 hover:text-white hover:cursor-pointer">Dashboard</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white hover:cursor-pointer">About</a>
+            <a href="dashboard" class="text-gray-400 hover:text-white hover:cursor-pointer">Dashboard</a>
           </li>
         </nav>
       </div>
       <div class="lg:w-1/2 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium tracking-widest text-sm mb-3 text-white">CATEGORIES</h2>
-        <nav class="list-none mb-10">
+        <h2 class="text-center title-font font-medium tracking-widest text-sm mb-3 text-white">CATEGORIES</h2>
+        <nav class="text-center list-none mb-10">
           <li>
-            <a class="text-gray-400 hover:text-white hover:cursor-pointer">Contact Us</a>
+            <a href="/about" class="text-gray-400 hover:text-white hover:cursor-pointer">About</a>
           </li>
           <li>
-            <a class="text-gray-400 hover:text-white hover:cursor-pointer">Fuck You</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white hover:cursor-pointer">Fuck You</a>
+            <a href="/contact" class="text-gray-400 hover:text-white hover:cursor-pointer">Contact Us</a>
           </li>
         </nav>
       </div>
@@ -58,7 +52,7 @@ function Footer() {
   </div>
   <div class="bg-gray-100">
     <div class="container mx-auto py-3 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-500 text-sm text-center sm:text-left">© 2023 Squid Bank —
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2023 The Legendary Predictor —
       </p>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
         <a class="ml-3 hover:text-black hover:cursor-pointer text-gray-400">

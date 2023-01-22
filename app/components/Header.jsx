@@ -2,10 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const style={
-  backgroundColor: '#133a3e'
-}
-
 function Header() {
   const [user, setUser] = useState();
   const router = useRouter();
@@ -23,7 +19,7 @@ function Header() {
     router.push("/login");
   };
   return (
-    <header aria-label="Site Header" style={style} >
+    <header aria-label="Site Header" className="bg-slate-900" >
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <Link className="block text-teal-400" href="/">
           <span className="sr-only">Home</span>
