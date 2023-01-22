@@ -55,7 +55,7 @@ function Header() {
               <li>
                 <Link
                   className="text-white transition hover:text-teal-400"
-                  href="/"
+                  href="/dashboard"
                 >
                   Dashboard
                 </Link>
@@ -64,7 +64,7 @@ function Header() {
               <li>
                 <Link
                   className="text-white transition hover:text-teal-400"
-                  href="/"
+                  href="/about"
                 >
                   About
                 </Link>
@@ -73,7 +73,7 @@ function Header() {
               <li>
                 <Link
                   className="text-white transition hover:text-teal-400"
-                  href="/"
+                  href="/contact"
                 >
                   Contact Us
                 </Link>
@@ -83,7 +83,7 @@ function Header() {
               <li>
                 <Link
                   className="text-white transition hover:text-teal-400"
-                  href="/"
+                  href="/about"
                 >
                   About
                 </Link>
@@ -92,45 +92,27 @@ function Header() {
               <li>
                 <Link
                   className="text-white transition hover:text-teal-400"
-                  href="/"
+                  href="/dashboard"
                 >
-                  Careers
+                  Dashboard
                 </Link>
               </li>
 
               <li>
                 <Link
                   className="text-white transition hover:text-teal-400"
-                  href="/"
+                  href="/about"
                 >
-                  History
+                  About
                 </Link>
               </li>
 
               <li>
                 <Link
                   className="text-white transition hover:text-teal-400"
-                  href="/"
+                  href="/contact"
                 >
-                  Services
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="text-white transition hover:text-teal-400"
-                  href="/"
-                >
-                  Projects
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="text-white transition hover:text-teal-400"
-                  href="/"
-                >
-                  Blog
+                  Contact Us
                 </Link>
               </li>
             </ul>

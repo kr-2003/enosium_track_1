@@ -30,7 +30,7 @@ const style = {
 };
 const myStyle = {
   backgroundImage:
-    "url('https://img.freepik.com/premium-vector/money-bag-with-dollar-sign-house-scales-real-estate-rental-expense-liabilities-concept-buying-home-mortgage-loan-real-estate-investment-sale-rent-apartment_458444-1108.jpg?w=2000')",
+    "url('/images/dashboard-img.webp')",
   height: '500px'
 }
 const myStyle2 = {
