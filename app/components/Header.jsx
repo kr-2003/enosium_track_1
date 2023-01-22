@@ -2,6 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+const style={
+  backgroundColor: '#133a3e'
+}
+
 function Header() {
   const [user, setUser] = useState();
   const router = useRouter();
@@ -19,9 +23,9 @@ function Header() {
     router.push("/login");
   };
   return (
-    <header aria-label="Site Header" className="bg-white">
+    <header aria-label="Site Header" style={style} >
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <Link className="block text-teal-600" href="/">
+        <Link className="block text-teal-400" href="/">
           <span className="sr-only">Home</span>
           <svg
             className="h-8"
@@ -41,7 +45,25 @@ function Header() {
             <ul className="flex items-center gap-6 text-sm">
               <li>
                 <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-white transition hover:text-teal-400"
+                  href="/"
+                >
+                  Home
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="text-white transition hover:text-teal-400"
+                  href="/"
+                >
+                  Dashboard
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="text-white transition hover:text-teal-400"
                   href="/"
                 >
                   About
@@ -50,53 +72,17 @@ function Header() {
 
               <li>
                 <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-white transition hover:text-teal-400"
                   href="/"
                 >
-                  Careers
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  History
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  Services
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  Projects
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  Blog
+                  Contact Us
                 </Link>
               </li>
             </ul>
             <ul className="text-sm hidden">
               <li>
                 <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-white transition hover:text-teal-400"
                   href="/"
                 >
                   About
@@ -105,7 +91,7 @@ function Header() {
 
               <li>
                 <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-white transition hover:text-teal-400"
                   href="/"
                 >
                   Careers
@@ -114,7 +100,7 @@ function Header() {
 
               <li>
                 <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-white transition hover:text-teal-400"
                   href="/"
                 >
                   History
@@ -123,7 +109,7 @@ function Header() {
 
               <li>
                 <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-white transition hover:text-teal-400"
                   href="/"
                 >
                   Services
@@ -132,7 +118,7 @@ function Header() {
 
               <li>
                 <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-white transition hover:text-teal-400"
                   href="/"
                 >
                   Projects
@@ -141,7 +127,7 @@ function Header() {
 
               <li>
                 <Link
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-white transition hover:text-teal-400"
                   href="/"
                 >
                   Blog
