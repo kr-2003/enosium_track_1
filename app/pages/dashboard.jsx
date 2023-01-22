@@ -66,43 +66,7 @@ function Dashboard() {
     yearsOfStay,
     purpose,
   } = useContext(authApi);
-  const submitFormHandler = async () => {
-    const body = {
-      noOfMaintainers: Number(noOfMaintainers),
-      history: history,
-      purpose: purpose,
-      loanAmount: Number(loanAmount),
-      GorB: GorB,
-      marital: marital,
-      noOfLoans: Number(noOfLoans),
-      age: Number(age),
-      currentAmount: currentAmount,
-      savingsAmount: savingsAmount,
-      instPercent: Number(instPercent),
-      otherPlans: otherPlans,
-      abroad: abroad,
-      phoneAvail: phoneAvail,
-      duration: Number(duration),
-      collateral: collateral,
-      job: job,
-      housing: housing,
-      yearsOfStay: Number(yearsOfStay),
-    };
-    console.log(body);
-    await axios
-      .post("https://3jemp5.deta.dev/getPrediction", body)
-      .then((response) => {
-        console.log(response);
-        console.log(response.data);
-        router.push(
-          { pathname: "/result", query: { result: response.data } },
-          "/result"
-        );
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+ 
   useEffect(() => {
     if (localStorage.getItem("user")) {
       setUser(JSON.parse(localStorage.getItem("user")));
