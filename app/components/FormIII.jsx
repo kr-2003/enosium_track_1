@@ -93,13 +93,13 @@ function FormIII() {
       setLoading(true);
       setOpen("result");
       await axios
-        .post("https://3jemp5.deta.dev/getPrediction", body)
+        .post("http://localhost:8000/getPrediction", body)
         .then((response) => {
           console.log(response);
           console.log(response.data);
-          setResult(response.data);
+          setResult(response.data.result);
           setLoading(false);
-          if (response.data == "1") {
+          if (response.data.result == "1") {
             setGif("/images/down.gif");
           } else {
             setGif("/images/up2.gif");
