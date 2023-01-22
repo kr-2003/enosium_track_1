@@ -1,11 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { authApi } from "../pages/_app";
+import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+const style = {
+  position: "absolute",
+  top: "10%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  height: "auto",
+  bgcolor: "background.paper",
+  borderRadius: 1,
+  boxShadow: 24,
+  width: "400px",
+  pt: 1,
+  pb: 4,
+  px: 4,
+};
 
 function FormI() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [errArr, setErrArr] = useState([]);
+  const [attrArr, setAttrArr] = useState([]);
+
+  const { noOfMaintainers, history, loanAmount, GorB, marital, purpose } =
+    useContext(authApi);
   const {
+    page,
+    setPage,
     setNoOfMaintainers,
     setHistory,
     setLoanAmount,
@@ -13,9 +39,53 @@ function FormI() {
     setMarital,
     setPurpose,
   } = useContext(authApi);
+  const nextHandler = () => {
+    if (
+      noOfMaintainers == undefined ||
+      history == undefined ||
+      loanAmount == undefined ||
+      GorB == undefined ||
+      marital == undefined ||
+      purpose == undefined
+    ) {
+      setOpen(true);
+    } else setPage(page + 1);
+  };
+  const config = {
+    type: "spring",
+    damping: 20,
+    stiffness: 100,
+  };
   return (
     <>
-      <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style} className="md:w-[450px] w-[90%] grid grid-cols-1 gap-4">
+          {/* <FormII></FormII>
+          <FormIII></FormIII> */}
+          {/* <div className="col-span-6 sm:flex sm:items-center sm:gap-4 w-100 flex justify-center items-center">
+            <button
+              onClick={submitFormHandler}
+              className="inline-block shrink-0 rounded-md border border-[#0d9488] bg-[#0d9488] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0d9488] focus:outline-none focus:ring active:text-blue-500"
+            >
+              Submit
+            </button>
+          </div> */}
+          <div>Please fill all the fields!!</div>
+        </Box>
+      </Modal>
+      <motion.form
+        action="#"
+        className="mt-8 grid grid-cols-6 gap-6"
+        transition={config}
+        initial={{ scale: 0.7, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ x: 0, opacity: 0 }}
+      >
         <div className="col-span-6 sm:col-span-3">
           <label className="block text-sm font-medium text-gray-700">
             Number of Maintainers
@@ -142,6 +212,15 @@ function FormI() {
             </option>
           </select>
         </div>
+        <div className="col-span-3 sm:flex sm:items-center sm:gap-4 w-100 flex justify-center items-center"></div>
+        <div className="col-span-3 sm:flex sm:items-center sm:gap-4 w-100 flex justify-center items-center">
+          <button
+            onClick={nextHandler}
+            className="inline-block shrink-0 rounded-md border border-[#0d9488] bg-[#0d9488] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0d9488] focus:outline-none focus:ring active:text-blue-500"
+          >
+            Next
+          </button>
+        </div>
         {/* <div className="col-span-6 sm:col-span-3">
           <label className="block text-sm font-medium text-gray-700">
             Number of Loans
@@ -170,7 +249,7 @@ function FormI() {
             className="p-2 h-10 mt-1 w-full rounded-md border-[1px] border-[#0d9488] bg-white text-sm text-gray-700 shadow-sm"
           />
         </div> */}
-      </form>
+      </motion.form>
     </>
   );
 }

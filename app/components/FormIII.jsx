@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { authApi } from "../pages/_app";
+import { motion } from "framer-motion";
 
 function FormIII() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const {
+    page,
+    setPage,
     setPhoneAvail,
     setDuration,
     setCollateral,
@@ -13,9 +16,100 @@ function FormIII() {
     setHousing,
     setJob,
   } = useContext(authApi);
+  const {
+    noOfMaintainers,
+    history,
+    loanAmount,
+    GorB,
+    marital,
+    noOfLoans,
+    age,
+    currentAmount,
+    savingsAmount,
+    instPercent,
+    otherPlans,
+    abroad,
+    phoneAvail,
+    duration,
+    collateral,
+    job,
+    housing,
+    yearsOfStay,
+    purpose,
+  } = useContext(authApi);
+  let attrArr = [
+    noOfMaintainers,
+    history,
+    loanAmount,
+    GorB,
+    marital,
+    noOfLoans,
+    age,
+    currentAmount,
+    savingsAmount,
+    instPercent,
+    otherPlans,
+    abroad,
+    phoneAvail,
+    duration,
+    collateral,
+    job,
+    housing,
+    yearsOfStay,
+    purpose,
+  ];
+  const submitFormHandler = async () => {
+    const body = {
+      noOfMaintainers: Number(noOfMaintainers),
+      history: history,
+      purpose: purpose,
+      loanAmount: Number(loanAmount),
+      GorB: GorB,
+      marital: marital,
+      noOfLoans: Number(noOfLoans),
+      age: Number(age),
+      currentAmount: currentAmount,
+      savingsAmount: savingsAmount,
+      instPercent: Number(instPercent),
+      otherPlans: otherPlans,
+      abroad: abroad,
+      phoneAvail: phoneAvail,
+      duration: Number(duration),
+      collateral: collateral,
+      job: job,
+      housing: housing,
+      yearsOfStay: Number(yearsOfStay),
+    };
+    console.log(body);
+    await axios
+      .post("https://3jemp5.deta.dev/getPrediction", body)
+      .then((response) => {
+        console.log(response);
+        console.log(response.data);
+        router.push(
+          { pathname: "/result", query: { result: response.data } },
+          "/result"
+        );
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const config = {
+    type: "spring",
+    damping: 20,
+    stiffness: 100,
+  };
   return (
     <>
-      <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+      <motion.form
+        action="#"
+        className="mt-8 grid grid-cols-6 gap-6"
+        transition={config}
+        initial={{ scale: 0.7, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ x: 0, opacity: 0 }}
+      >
         <div className="col-span-6 sm:col-span-3">
           <label className="block text-sm font-medium text-gray-700">
             Phone Number
@@ -116,7 +210,23 @@ function FormIII() {
             <option value="rent">rent</option>
           </select>
         </div>
-      </form>
+        <div className="col-span-3 sm:flex sm:items-center sm:gap-4 flex justify-center items-center">
+          <button
+            onClick={() => setPage(page - 1)}
+            className="inline-block shrink-0 rounded-md border border-[#0d9488] bg-[#0d9488] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0d9488] focus:outline-none focus:ring active:text-blue-500"
+          >
+            Previous
+          </button>
+        </div>
+        <div className="col-span-3 sm:flex sm:items-center sm:gap-4 flex justify-center items-center">
+          <button
+            onClick={submitFormHandler}
+            className="inline-block shrink-0 rounded-md border border-[#0d9488] bg-[#0d9488] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0d9488] focus:outline-none focus:ring active:text-blue-500"
+          >
+            Submit
+          </button>
+        </div>
+      </motion.form>
     </>
   );
 }

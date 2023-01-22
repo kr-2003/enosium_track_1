@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { authApi } from "../pages/_app";
+import { motion } from "framer-motion";
 
 function FormII() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const {
+    page,
+    setPage,
     setNoOfLoans,
     setAge,
     setSavingsAmount,
@@ -14,9 +17,21 @@ function FormII() {
     setAbroad,
     setCurrentAmount,
   } = useContext(authApi);
+  const config = {
+    type: "spring",
+    damping: 20,
+    stiffness: 100,
+  };
   return (
     <>
-      <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+      <motion.form
+        action="#"
+        className="mt-8 grid grid-cols-6 gap-6"
+        transition={config}
+        initial={{ scale: 0.7, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ x: 0, opacity: 0 }}
+      >
         <div className="col-span-6 sm:col-span-3">
           <label className="block text-sm font-medium text-gray-700">
             Number of Loans
@@ -126,7 +141,23 @@ function FormII() {
             <option value="No">No</option>
           </select>
         </div>
-      </form>
+        <div className="col-span-3 sm:flex sm:items-center sm:gap-4 flex justify-center items-center">
+          <button
+            onClick={() => setPage(page - 1)}
+            className="inline-block shrink-0 rounded-md border border-[#0d9488] bg-[#0d9488] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0d9488] focus:outline-none focus:ring active:text-blue-500"
+          >
+            Previous
+          </button>
+        </div>
+        <div className="col-span-3 sm:flex sm:items-center sm:gap-4 flex justify-center items-center">
+          <button
+            onClick={() => setPage(page + 1)}
+            className="inline-block shrink-0 rounded-md border border-[#0d9488] bg-[#0d9488] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0d9488] focus:outline-none focus:ring active:text-blue-500"
+          >
+            Next
+          </button>
+        </div>
+      </motion.form>
     </>
   );
 }

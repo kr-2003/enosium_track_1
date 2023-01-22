@@ -3,9 +3,12 @@ import { createContext, useEffect, useState } from "react";
 export const authApi = createContext(null);
 import Script from "next/script";
 import Head from "next/head";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function App({ Component, pageProps }) {
   const [auth, setAuth] = useState(false);
+  const [page, setPage] = useState(0);
   const [user, setUser] = useState();
   const [noOfMaintainers, setNoOfMaintainers] = useState();
   const [history, setHistory] = useState();
@@ -39,6 +42,8 @@ export default function App({ Component, pageProps }) {
   return (
     <authApi.Provider
       value={{
+        page,
+        setPage,
         auth,
         setAuth,
         user,
