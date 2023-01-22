@@ -24,6 +24,7 @@ function FormIII() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [gif, setGif] = useState();
+  const [loading, setLoading] = useState(false);
   const {
     page,
     setPage,
@@ -89,12 +90,15 @@ function FormIII() {
         yearsOfStay: Number(yearsOfStay),
       };
       console.log(body);
+      setLoading(true);
+      setOpen("result");
       await axios
         .post("https://3jemp5.deta.dev/getPrediction", body)
         .then((response) => {
           console.log(response);
           console.log(response.data);
           setResult(response.data);
+          setLoading(false);
           if (response.data == "1") {
             setGif("/images/down.gif");
           } else {
@@ -147,12 +151,41 @@ function FormIII() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className="bg-[#fff] md:w-[450px] w-[90%] grid grid-cols-1 gap-4">
-          <Image alt="Result Icon" src={gif} width={100} height={100}></Image>
-          {result === "1" && <h1>You are a loan defaulter!</h1>}
-          {result === "2" && <h2>You are not a loan defaulter!</h2>}
-          {/* <div>Please fill all the fields!!</div> */}
-          <button onClick={() => Router.reload()}>OK</button>
+        <Box
+          sx={style}
+          className="bg-[#fff] md:w-[450px] w-[90%] grid grid-cols-1 gap-4"
+        >
+          {loading && (
+            <>
+              <div className="flex justify-center items-center">
+                <Image
+                  alt="Loading Icon"
+                  src={"/images/loading.gif"}
+                  width={100}
+                  height={100}
+                ></Image>
+              </div>
+
+              <h1>Loading....</h1>
+            </>
+          )}
+          {!loading && (
+            <>
+              <div className="flex justify-center items-center">
+                <Image
+                  alt="Result Icon"
+                  src={gif}
+                  width={100}
+                  height={100}
+                ></Image>
+              </div>
+
+              {result === "1" && <h1>You are a loan defaulter!</h1>}
+              {result === "2" && <h2>You are not a loan defaulter!</h2>}
+              {/* <div>Please fill all the fields!!</div> */}
+              <button onClick={() => Router.reload()}>OK</button>
+            </>
+          )}
         </Box>
       </Modal>
       <motion.form
